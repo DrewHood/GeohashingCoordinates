@@ -24,8 +24,10 @@ class Geohashing
 		$lonHash = substr($hash, 16, 15);
 
 		// Convert to decimal
-		//$divisor = pow(16,15);
+		//$divisor = pow(16,15); 
+		// The line below is the result of this function. Let's save some compute time.
 		$divisor = 1152921504606846976;
+		
 		$lat = hexdec($latHash) / $divisor;
 		$lon = hexdec($lonHash) / $divisor;
 
