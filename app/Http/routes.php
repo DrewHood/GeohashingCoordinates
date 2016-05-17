@@ -11,8 +11,4 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return $app->version();
-});
-
 $app->get('/geo/{sourceString}', "GeohashingController@show");
