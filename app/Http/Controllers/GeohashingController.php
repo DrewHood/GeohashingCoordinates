@@ -17,7 +17,7 @@ class GeohashingController extends Controller
 	 */
 	public function show(Request $request, String $sourceString)
 	{
-		$coordinate = Geohashing::calculateCoordinatesForString($sourceString);
+		$coordinate = Geohashing::calculateCoordinateOffsetsForString($sourceString);
 
 		$debug = boolval($request->input('debug')); // This will be activated if anything is sent in.
 
